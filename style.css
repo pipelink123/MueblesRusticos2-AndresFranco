@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+/* ------------------------desktop----------------------- */
+@media(min-width: 1024px) {
+    body {
+        /* CONFIGURACION estructura GRID */
+        width: 100%;
+        height: 100vh;
+        /* ------------------- */
+        background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0.02, #2e0d07), color-stop(0.8, #af6a27));
+    }
+
+    .border {
+        /* border: solid 1px #000; */
+    }
+
+    /* CONFIGURACION estructura GRID */
+    #gridAreas {
+
+
+        display: grid;
+        grid-template-areas:
+            "header header header"
+            /* fila 1 */
+            "mitad1 mitad1 mitad1 "
+            /* fila 2 */
+            "mitad2 mitad2 mitad2 "
+            /* fila 3 */
+            "pie pie pie "
+            /* fila  4*/
+        ;
+    }
+
+    /* ------------------------------ */
+
+
+
+    /* Nombrar cada Area GRID */
+
+
+    header {
+        /* CONFIGURACION estructura GRID */
+        grid-area: header;
+        /* ------------------------------ */
+        /* flex */
+        display: flex;
+        flex-direction: row;
+        /* ------------------------------ */
+        /* ESTILOS */
+        border-radius: 20px;
+        margin: 10px;
+        background-color: #ffd360;
+        box-shadow: 16px 16px 26px #4f2307;
+        font-size: 18px;
+    }
+
+    /* divicion logo y nombre */
+    .logo1 {
+        margin-left: 60px;
+
+        /* acordarse de hacer ul link aqui */
+    }
+
+    /* grupo de links */
+    ul {
+        display: flex;
+        margin: auto;
+    }
+
+    /* confg de cada link */
+    li {
+        margin-left: 65px;
+    }
+
+    a {
+        color: #2e0d07;
+    }
+
+    p {
+        color: white;
+    }
+
+
+    #mid1 {
+        grid-area: mitad1;
+        display: flex;
+        margin: 20px;
+    }
+
+    .contacto {
+        display: flex;
+        flex-direction: row;
+        margin-left: 190px;
+        margin-top: 120px;
+    }
+
+    .formulario {
+        margin-left: 80px;
+
+    }
+
+    .textoPrincipal {
+        text-align: center;
+        margin-top: 250px;
+    }
+
+    #mid2 {
+        grid-area: mitad2;
+    }
+
+    .body-down {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 20px;
+        margin: 20px;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    footer {
+        grid-area: pie;
+        display: flex;
+        flex-direction: row;
+        height: 50px;
+        background-color: #290d05;
+        border-radius: 8px;
+        align-items: center;
+        justify-content: space-evenly;
+        /* margin: 10px; */
+    }
+
+
+}
+
+/* ------------------------MOVILE----------------------- */
+@media(min-width: 320px) and (max-width: 1023px) {
+
+    header {
+        /* CONFIGURACION estructura GRID */
+        grid-area: header;
+        /* ------------------------------ */
+        /* flex */
+        display: flex;
+        flex-direction: row;
+        /* ------------------------------ */
+        /* ESTILOS */
+        border-radius: 20px;
+        margin: 10px;
+        background-color: #ffd360;
+        box-shadow: 16px 16px 26px #4f2307;
+        font-size: 18px;
+    }
+
+    .logo1 {
+        margin-left: 60px;
+
+        /* acordarse de hacer ul link aqui */
+    }
+
+    ul {
+        margin-left: 80px;
+        margin-top: 15px;
+
+    }
+
+    li {
+        margin: 5px;
+    }
+
+    a {
+        color: #2e0d07;
+    }
+
+    #imgp {
+        margin-left: 60px;
+        height: 350px;
+    }
+
+    .textoPrincipal{
+        visibility: hidden;
+    }
+
+    .body-down {
+        justify-content: center;
+        align-items: center;
+        margin: 70px;
+    }
+
+    body {
+
+        background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0.02, #741606), color-stop(0.8, #af6a27));
+    }
+
+    #mid1 {
+        grid-area: mitad1;
+        /* confg de grid */
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 20px;
+
+    }
+
+    #mapac {
+        width: 450px;
+    }
+
+    footer {
+        grid-area: pie;
+        display: flex;
+        flex-direction: row;
+        height: 50px;
+        background-color: #bb8b24;
+        border-radius: 8px;
+        align-items: center;
+        justify-content: space-evenly;
+        /* margin: 10px; */
+    }
+}
